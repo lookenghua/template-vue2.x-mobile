@@ -5,9 +5,11 @@ import router from "./router";
 import store from "./store";
 import "amfe-flexible";
 import Vconsole from "vconsole";
+/*样式重置*/
+import "./assets/css/reset.css";
 
 Vue.config.productionTip = false;
-if (process.env.NODE_ENV) {
+if (process.env.NODE_ENV === "development") {
   new Vconsole();
 }
 new Vue({
