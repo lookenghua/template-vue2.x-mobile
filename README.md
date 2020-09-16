@@ -11,7 +11,7 @@ yarn install
 yarn serve
 ```
 
-### 正式环境测试
+### 正式环境打包
 ```
 yarn build
 ```

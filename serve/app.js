@@ -1,4 +1,5 @@
 const Koa = require("koa");
+const path = require("path");
 const figlet = require("figlet");
 const serve = require("koa-static");
 const history = require("connect-history-api-fallback");
@@ -8,7 +9,6 @@ const router = require("koa-router")();
 const config = require("./config.json");
 
 const app = new Koa();
-
 // 压缩请求
 app.use(
   compress({
@@ -21,8 +21,8 @@ app.use(
   })
 );
 // 路由
-app.use(router.routes);
-app.use(router.allowedMethods);
+app.use(router.routes());
+app.use(router.allowedMethods());
 // 转发请求
 if (config.proxy && config.proxy.length > 0) {
   config.proxy.forEach(item => {
@@ -34,7 +34,7 @@ if (config.proxy && config.proxy.length > 0) {
   });
 }
 // 静态文件
-app.use(serve("/static"));
+app.use(serve(path.join(__dirname, "./static")));
 // 配置单页面刷新问题
 app.use(history());
 
