@@ -1,34 +1,39 @@
-# mobile
+# 移动端模板
 
-## Project setup
+项目启动
+
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 开发环境运行
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 正式环境测试
 ```
 yarn build
 ```
 
-### Run your unit tests
+### 运行单元测试
 ```
 yarn test:unit
 ```
 
-### Run your end-to-end tests
+### 运行端对端测试
 ```
 yarn test:e2e
 ```
 
-### Lints and fixes files
+### 静态代码分析和修复文件
 ```
 yarn lint
 ```
+### 支持的功能
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. 默认Vant ui框架,按需引入
+2. 支持px自动转换rem
+3. gzip压缩
+4. 请求转发
+
