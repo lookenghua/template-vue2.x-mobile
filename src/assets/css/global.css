@@ -1,0 +1,68 @@
+/*弹性盒子*/
+.flex {
+    display: flex;
+}
+
+/*均分*/
+.flex-1 {
+    flex: 1;
+}
+
+/*主轴为纵轴*/
+.column {
+    flex-flow: column;
+}
+
+/*主轴为横轴*/
+.row {
+    flex-flow: row;
+}
+
+/*全部居中*/
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*纵轴居中*/
+.items-center {
+    align-items: center;
+}
+
+/*横轴居中*/
+.content-center {
+    justify-content: center;
+}
+
+/*横轴两边对齐*/
+.content-justify {
+    justify-content: space-between;
+}
+
+/*相对定位*/
+.relative {
+    position: relative;
+}
+
+/*左浮动*/
+.float-lf {
+    float: left;
+}
+
+/*右浮动*/
+.float-rt {
+    float: right;
+}
+
+/*横向滚动*/
+.scroll-x {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+/*100%的高度*/
+.h-100 {
+    height: 100%;
+}

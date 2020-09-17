@@ -32,8 +32,18 @@ yarn lint
 ```
 ### 支持的功能
 
-1. 默认Vant ui框架,按需引入
+1. 默认Vant ui框架,Scss预编译,按需引入
 2. 支持px自动转换rem
 3. gzip压缩
 4. 请求转发
+5. 样式重置
+
+### 开发中的功能
+
+
+### 说明
+1. src/assets 存放静态资源
+    - src/assets/css/reset.css 样式重置
+    - src/assets/css/global.css 全局样式
+    - src/assets/scss/mixins.scss 存放变量
 

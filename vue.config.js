@@ -1,4 +1,5 @@
 const CompressionPlugin = require("compression-webpack-plugin");
+const path = require("path");
 const isProd = process.env.NODE_ENV === "production";
 module.exports = {
   configureWebpack: config => {
@@ -11,6 +12,12 @@ module.exports = {
           deleteOriginalAssets: false // 不删除源文件
         })
       ];
+    }
+  },
+  pluginOptions: {
+    "style-resources-loader": {
+      preProcessor: "scss",
+      patterns: [path.resolve(__dirname, "./src/assets/scss/mixins.scss")]
     }
   }
 };
