@@ -47,3 +47,37 @@ yarn lint
     - src/assets/css/global.css 全局样式
     - src/assets/scss/mixins.scss 存放变量
 
+### 文件目录
+```
+mobile
+├── build 
+├── public  # 公共文件
+├── serve  # 服务器代码
+├── src # 项目代码
+│    └── api  # 接口文件
+│    └── assets  # 静态资源
+│          └── css  # css文件
+│          └── img  # 图片资源
+│          └── scss  # scss文件
+│    └── components  # 公用组件
+│    └── router  # 路由
+│    └── store   # 状态管理
+│    └── views   # 页面
+│    └── App.vue # 根节点文件
+│    └── main.js # 项目入口文件
+│    └── registerServiceWorker.js # pwa配置
+├── tests # 单元测试
+├── .env # 环境文件
+├── .env.development # 开发环境文件
+├── .env.production # 生产环境文件
+├── .eslintrc.js # eslint配置文件
+├── .gitignore # git忽略文件
+├── babel.config.js # babel语法编译
+├── cypress.json # cypress测试框架配置
+├── jest.config.js # jest单元测试配置
+├── package.json # 项目基本配置
+├── postcss.config.js # postcss配置文件
+├── README.md  # 项目介绍
+└── vue.config.js # vue配置文件
+
+```
