@@ -1,4 +1,5 @@
 import Vue from "vue";
+import VuePageStack from "vue-page-stack";
 import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
@@ -17,6 +18,7 @@ Vue.config.productionTip = false;
 if (process.env.NODE_ENV === "development") {
   new Vconsole();
 }
+Vue.use(VuePageStack, { router });
 new Vue({
   router,
   store,

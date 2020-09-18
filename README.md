@@ -37,15 +37,10 @@ yarn lint
 3. gzip压缩
 4. 请求转发
 5. 样式重置
+6. 单页应用导航管理器
 
 ### 开发中的功能
 
-
-### 说明
-1. src/assets 存放静态资源
-    - src/assets/css/reset.css 样式重置
-    - src/assets/css/global.css 全局样式
-    - src/assets/scss/mixins.scss 存放变量
 
 ### 文件目录
 ```
@@ -57,8 +52,11 @@ mobile
 │    └── api  # 接口文件
 │    └── assets  # 静态资源
 │          └── css  # css文件
+│               └── reset.css  # 样式重置
+│               └── global.css  # 全局样式
 │          └── img  # 图片资源
 │          └── scss  # scss文件
+│               └── mixins.scss  # 变量和动态样式
 │    └── components  # 公用组件
 │    └── router  # 路由
 │    └── store   # 状态管理
