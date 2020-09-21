@@ -14,10 +14,18 @@ module.exports = {
       ];
     }
   },
+  chainWebpack: config => {
+    if (process.env.use_analyzer) {
+      config
+        .plugin("webpack-bundle-analyzer")
+        .use(require("webpack-bundle-analyzer").BundleAnalyzerPlugin);
+    }
+  },
   pluginOptions: {
     "style-resources-loader": {
       preProcessor: "scss",
       patterns: [path.resolve(__dirname, "./src/assets/scss/mixins.scss")]
     }
-  }
+  },
+  productionSourceMap: false
 };
