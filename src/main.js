@@ -11,6 +11,8 @@ import Vconsole from "vconsole";
 import "./assets/css/reset.css";
 /*全局样式*/
 import "./assets/css/global.css";
+/*导入vant*/
+import Vant from "./plugin/vant";
 
 /*全局注册axios*/
 Vue.prototype.$http = http;
@@ -18,7 +20,10 @@ Vue.config.productionTip = false;
 if (process.env.NODE_ENV === "development") {
   new Vconsole();
 }
+
 Vue.use(VuePageStack, { router });
+Vue.use(Vant);
+
 new Vue({
   router,
   store,

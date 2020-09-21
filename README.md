@@ -8,7 +8,7 @@ yarn install
 
 ### 开发环境运行
 ```
-yarn serve
+yarn dev
 ```
 
 ### 正式环境打包
@@ -40,7 +40,10 @@ yarn lint
 6. 单页应用导航管理器
 
 ### 开发中的功能
-
+1. 文件大小分析
+2. 骨架屏
+3. 路由拆分
+4. 状态管理拆分
 
 ### 文件目录
 ```
@@ -49,20 +52,20 @@ mobile
 ├── public  # 公共文件
 ├── serve  # 服务器代码
 ├── src # 项目代码
-│    └── api  # 接口文件
-│    └── assets  # 静态资源
-│          └── css  # css文件
-│               └── reset.css  # 样式重置
-│               └── global.css  # 全局样式
-│          └── img  # 图片资源
-│          └── scss  # scss文件
-│               └── mixins.scss  # 变量和动态样式
-│    └── components  # 公用组件
-│    └── router  # 路由
-│    └── store   # 状态管理
-│    └── views   # 页面
-│    └── App.vue # 根节点文件
-│    └── main.js # 项目入口文件
+│    ├── api  # 接口文件
+│    ├── assets  # 静态资源
+│    │      ├── css  # css文件
+│    │      │    ├── reset.css  # 样式重置
+│    │      │    └── global.css  # 全局样式
+│    │      ├── img  # 图片资源
+│    │      └── scss  # scss文件
+│    │           └── mixins.scss  # 变量和动态样式
+│    ├── components  # 公用组件
+│    ├── router  # 路由
+│    ├── store   # 状态管理
+│    ├── views   # 页面
+│    ├── App.vue # 根节点文件
+│    ├── main.js # 项目入口文件
 │    └── registerServiceWorker.js # pwa配置
 ├── tests # 单元测试
 ├── .env # 环境文件
@@ -77,5 +80,4 @@ mobile
 ├── postcss.config.js # postcss配置文件
 ├── README.md  # 项目介绍
 └── vue.config.js # vue配置文件
-
 ```
