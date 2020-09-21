@@ -1,5 +1,8 @@
 const CompressionPlugin = require("compression-webpack-plugin");
 const path = require("path");
+const dayjs = require("dayjs");
+
+process.env.VUE_APP_TIME = dayjs().format("YYYY-MM-DD HH:mm:ss");
 const isProd = process.env.NODE_ENV === "production";
 module.exports = {
   configureWebpack: config => {
@@ -20,6 +23,12 @@ module.exports = {
         .plugin("webpack-bundle-analyzer")
         .use(require("webpack-bundle-analyzer").BundleAnalyzerPlugin);
     }
+    config.plugin("html").tap(args => {
+      if (isProd) {
+        args[0].minify.removeComments = false;
+      }
+      return args;
+    });
   },
   pluginOptions: {
     "style-resources-loader": {
