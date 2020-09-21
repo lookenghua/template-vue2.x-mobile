@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "analyzer": "cross-env use_analyzer=true npm run build:spa",
+    "clear": "node build/clear.js",
     "dev": "vue-cli-service serve",
     "build": "node build/build.js",
+    "build:spa": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint",
-    "build:spa": "vue-cli-service build",
-    "clear": "node build/clear.js"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "amfe-flexible": "^2.2.1",
