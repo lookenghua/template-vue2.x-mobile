@@ -5,6 +5,10 @@ const dayjs = require("dayjs");
 process.env.VUE_APP_TIME = dayjs().format("YYYY-MM-DD HH:mm:ss");
 const isProd = process.env.NODE_ENV === "production";
 module.exports = {
+  productionSourceMap: false,
+  css: {
+    sourceMap: !isProd
+  },
   configureWebpack: config => {
     if (isProd) {
       config.plugins = [
@@ -35,6 +39,5 @@ module.exports = {
       preProcessor: "scss",
       patterns: [path.resolve(__dirname, "./src/assets/scss/mixins.scss")]
     }
-  },
-  productionSourceMap: false
+  }
 };
