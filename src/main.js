@@ -13,6 +13,10 @@ import "./assets/css/reset.css";
 import "./assets/css/global.css";
 /*导入vant*/
 import Vant from "./plugin/vant";
+/*引入vue-create-api*/
+import "./plugin/create";
+/*引入CompositionAPI*/
+import VueCompositionAPI from "@vue/composition-api";
 
 /*全局注册axios*/
 Vue.prototype.$http = http;
@@ -23,6 +27,7 @@ if (process.env.NODE_ENV === "development") {
 
 Vue.use(VuePageStack, { router });
 Vue.use(Vant);
+Vue.use(VueCompositionAPI);
 
 new Vue({
   router,

@@ -10992,6 +10992,11 @@ vue-cli-plugin-style-resources-loader@~0.1.4:
   resolved "https://registry.npm.taobao.org/vue-cli-plugin-style-resources-loader/download/vue-cli-plugin-style-resources-loader-0.1.4.tgz#6087a86132ea8125aa89e5f8e0a978fbc8cf6f59"
   integrity sha1-YIeoYTLqgSWqieX44Kl4+8jPb1k=
 
+vue-create-api@^0.2.3:
+  version "0.2.3"
+  resolved "http://localhost:4873/vue-create-api/-/vue-create-api-0.2.3.tgz#920b4e76349cf6aef692a6f743b96dc09eade5cd"
+  integrity sha512-qMyKatsGGwOKyMmRNDEubMZLzWoPU5SMq2YxU/O5bLPDTfBsEVftpyFFDGBgD4iaRmjLAsv3Cw3X9nU+jsiY7g==
+
 vue-eslint-parser@^7.0.0:
   version "7.1.0"
   resolved "https://registry.npm.taobao.org/vue-eslint-parser/download/vue-eslint-parser-7.1.0.tgz#9cdbcc823e656b087507a1911732b867ac101e83"
