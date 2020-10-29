@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import createLogger from "vuex/dist/logger";
 
+import createPersistedState from "vuex-persistedstate";
 Vue.use(Vuex);
 
 const modulesFiles = require.context("./modules", true, /\.js$/);
@@ -19,5 +20,5 @@ export default new Vuex.Store({
   mutations: {},
   actions: {},
   modules,
-  plugins: [createLogger()]
+  plugins: [createLogger(), createPersistedState()]
 });
