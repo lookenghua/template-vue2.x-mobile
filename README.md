@@ -11,9 +11,14 @@ yarn install
 yarn dev
 ```
 
-### 正式环境打包
+### 服务器环境打包(部署linux服务器版本)
 ```
 yarn build
+```
+
+### 本地环境打包(APP内嵌版本)
+```
+yarn build:local
 ```
 
 ### 运行单元测试
@@ -62,13 +67,12 @@ mobile
 │    │      ├── img  # 图片资源
 │    │      └── scss  # scss文件
 │    │           └── mixins.scss  # 变量和动态样式
-│    ├── components  # 公用组件
+│    ├── components  # 全局公用组件
 │    ├── router  # 路由
 │    ├── store   # 状态管理
 │    ├── views   # 页面
 │    ├── App.vue # 根节点文件
-│    ├── main.js # 项目入口文件
-│    └── registerServiceWorker.js # pwa配置
+│    └── main.js # 项目入口文件
 ├── tests # 单元测试
 ├── .env # 环境文件
 ├── .env.development # 开发环境文件

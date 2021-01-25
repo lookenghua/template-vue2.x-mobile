@@ -1,13 +1,25 @@
 const Koa = require("koa");
 const path = require("path");
+const fs = require("fs");
 const figlet = require("figlet");
 const serve = require("koa-static");
 const history = require("connect-history-api-fallback");
 const proxy = require("koa-server-http-proxy");
 const compress = require("koa-compress");
 const router = require("koa-router")();
-const config = require("./config.json");
-
+const defaultConfig = require("./config.json");
+let customConfig = {};
+if (fs.existsSync(process.cwd() + "/config.json")) {
+  customConfig = require(process.cwd() + "/config.json");
+}
+let config;
+if (customConfig) {
+  config = Object.assign({}, defaultConfig, customConfig);
+} else {
+  config = defaultConfig;
+}
+console.log("配置");
+console.table(config);
 const app = new Koa();
 // 压缩请求
 app.use(

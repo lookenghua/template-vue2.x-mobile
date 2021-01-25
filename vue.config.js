@@ -27,12 +27,6 @@ module.exports = {
         .plugin("webpack-bundle-analyzer")
         .use(require("webpack-bundle-analyzer").BundleAnalyzerPlugin);
     }
-    config.plugin("html").tap(args => {
-      if (isProd) {
-        args[0].minify.removeComments = false;
-      }
-      return args;
-    });
   },
   pluginOptions: {
     "style-resources-loader": {

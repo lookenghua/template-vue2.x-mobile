@@ -1,15 +1,13 @@
-const { spawn, exec } = require("child_process");
-const { join } = require("path");
+const { spawn } = require("child_process");
 const ora = require("ora");
 const fs = require("fs-extra");
-const compressing = require("compressing");
 /*
  * 打包客户端
  * */
 const spinner1 = ora("正在打包客户端").start();
 const ls = spawn("vue-cli-service", ["build"], { shell: true });
-// ls.stdout.on("data", data => console.log(data.toString()));
-// ls.stderr.on("data", data => console.error(data.toString()));
+ls.stdout.on("data", data => console.log(data.toString()));
+ls.stderr.on("data", data => console.error(data.toString()));
 ls.on("close", code => {
   if (code === 0) {
     spinner1.succeed("打包客户端成功");
@@ -26,7 +24,8 @@ ls.on("close", code => {
       // 3.拷贝服务端
       fs.copySync("./serve", dir1, {
         filter: src => {
-          return !src.includes("node_modules");
+          return src;
+          // return !src.includes("node_modules");
         }
       });
       spinner2.succeed("复制服务端成功");
@@ -44,20 +43,19 @@ ls.on("close", code => {
         fs.copySync("./dist", dir2);
         spinner3.succeed("复制客户端成功");
         /*
-         * 打包成压缩包
+         * 打包成服务端
          * */
-        const spinner4 = ora("正在压缩文件夹").start();
-        compressing.zip
-          .compressDir(dir1, `${dir1}.zip`)
-          .then(() => {
-            spinner4.succeed("压缩文件夹成功");
-            const dir4 = join(__dirname, `serve-dist.zip`);
-            console.log(dir4);
-            exec(`explorer.exe /select,"${dir4}"`);
-          })
-          .catch(() => {
-            spinner4.fail("压缩文件夹失败");
-          });
+        const spinner4 = ora("正在打包成服务端").start();
+        const ls1 = spawn("npm", ["run", "pkg"], { shell: true });
+        ls1.stdout.on("data", data => console.log(data.toString()));
+        ls1.stderr.on("data", data => console.error(data.toString()));
+        ls1.on("close", code => {
+          if (code === 0) {
+            spinner4.succeed("打包服务端成功");
+          } else {
+            spinner4.fail("打包服务端失败");
+          }
+        });
       } catch {
         spinner3.fail("复制客户端失败");
       }

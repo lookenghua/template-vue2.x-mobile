@@ -7,19 +7,19 @@
     "clear": "node build/clear.js",
     "dev": "vue-cli-service serve",
     "build": "node build/build.js",
+    "build:local": "cross-env local=true npm run build:spa",
     "build:spa": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "pkg": "pkg -t linux ."
   },
   "dependencies": {
-    "@vue/composition-api": "^1.0.0-beta.14",
     "amfe-flexible": "^2.2.1",
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
     "dayjs": "^1.8.36",
     "fs-extra": "^9.0.1",
-    "register-service-worker": "^1.7.1",
     "swiper": "^6.2.0",
     "vant": "^2.10.6",
     "vconsole": "^3.3.4",
@@ -34,7 +34,6 @@
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-e2e-cypress": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-pwa": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "~4.5.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
@@ -51,6 +50,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "lint-staged": "^9.5.0",
     "ora": "^5.1.0",
+    "pkg": "^4.4.9",
     "postcss-pxtorem": "^5.1.1",
     "prettier": "^1.19.1",
     "sass": "^1.26.5",
@@ -68,5 +68,13 @@
       "vue-cli-service lint",
       "git add"
     ]
+  },
+  "bin": "build/serve-dist/app.js",
+  "pkg": {
+    "scripts": [],
+    "assets": [
+      "build/serve-dist"
+    ],
+    "targets": []
   }
 }

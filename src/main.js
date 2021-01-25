@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VuePageStack from "vue-page-stack";
 import App from "./App.vue";
-import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 import http from "./http";
@@ -13,8 +12,6 @@ import "./assets/css/reset.css";
 import "./assets/css/global.css";
 /*导入vant*/
 import Vant from "./plugin/vant";
-/*引入CompositionAPI*/
-import VueCompositionAPI from "@vue/composition-api";
 /*引入vue-create-api*/
 import "./plugin/create";
 
@@ -28,7 +25,6 @@ if (process.env.NODE_ENV === "development") {
 
 Vue.use(VuePageStack, { router });
 Vue.use(Vant);
-Vue.use(VueCompositionAPI);
 
 new Vue({
   router,

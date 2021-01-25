@@ -26,3 +26,4 @@ debug.log*
 *.sln
 *.sw?
 serve/node_modules
+build/serve-dist/
