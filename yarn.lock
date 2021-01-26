@@ -1395,10 +1395,10 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@vant/icons@1.5.0":
-  version "1.5.0"
-  resolved "https://registry.npm.taobao.org/@vant/icons/download/@vant/icons-1.5.0.tgz?cache=0&sync_timestamp=1611285711514&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vant%2Ficons%2Fdownload%2F%40vant%2Ficons-1.5.0.tgz#ce78a2f055a1a4099129bb6c44d54584f3740e27"
-  integrity sha1-znii8FWhpAmRKbtsRNVFhPN0Dic=
+"@vant/icons@1.5.2":
+  version "1.5.2"
+  resolved "https://registry.npm.taobao.org/@vant/icons/download/@vant/icons-1.5.2.tgz?cache=0&sync_timestamp=1611633849967&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vant%2Ficons%2Fdownload%2F%40vant%2Ficons-1.5.2.tgz#3f3ea353a0eacd38c113757bd31836489facb10b"
+  integrity sha1-Pz6jU6DqzTjBE3V70xg2SJ+ssQs=
 
 "@vant/popperjs@^1.0.0":
   version "1.0.2"
@@ -2246,10 +2246,10 @@ aws4@^1.8.0:
   resolved "https://registry.npm.taobao.org/aws4/download/aws4-1.11.0.tgz?cache=0&sync_timestamp=1604101244098&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faws4%2Fdownload%2Faws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha1-1h9G2DslGSUOJ4Ta9bCUeai0HFk=
 
-axios@^0.20.0:
-  version "0.20.0"
-  resolved "https://registry.npm.taobao.org/axios/download/axios-0.20.0.tgz#057ba30f04884694993a8cd07fa394cff11c50bd"
-  integrity sha1-BXujDwSIRpSZOozQf6OUz/EcUL0=
+axios@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.npm.taobao.org/axios/download/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha1-IlY0gZYvTWvemnbVFu8OXTwJsrg=
   dependencies:
     follow-redirects "^1.10.0"
 
@@ -11060,13 +11060,13 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vant@^2.10.6:
-  version "2.12.5"
-  resolved "https://registry.npm.taobao.org/vant/download/vant-2.12.5.tgz#f00f1531be1c082b53102f5f98fa44c26de3e7f6"
-  integrity sha1-8A8VMb4cCCtTEC9fmPpEwm3j5/Y=
+vant@^2.12.6:
+  version "2.12.6"
+  resolved "https://registry.npm.taobao.org/vant/download/vant-2.12.6.tgz?cache=0&sync_timestamp=1611633610326&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvant%2Fdownload%2Fvant-2.12.6.tgz#6edfb0d673236e5434d2e0c208ec66a81afcb7f2"
+  integrity sha1-bt+w1nMjblQ00uDCCOxmqBr8t/I=
   dependencies:
     "@babel/runtime" "7.x"
-    "@vant/icons" "1.5.0"
+    "@vant/icons" "1.5.2"
     "@vant/popperjs" "^1.0.0"
     "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0"
     vue-lazyload "1.2.3"

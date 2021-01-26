@@ -35,6 +35,11 @@ yarn test:e2e
 ```
 yarn lint
 ```
+
+### 更新依赖包
+```
+yarn upgrade-interactive --latest
+```
 ### 支持的功能
 
 1. 默认Vant ui框架,Scss预编译,按需引入
