@@ -27,6 +27,7 @@ module.exports = {
         .plugin("webpack-bundle-analyzer")
         .use(require("webpack-bundle-analyzer").BundleAnalyzerPlugin);
     }
+    config.resolve.symlinks(true);
   },
   pluginOptions: {
     "style-resources-loader": {

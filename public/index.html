@@ -7,6 +7,14 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
 	/>
+	<!-- 忽略自动识别电话 -->
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- 忽略自动识别邮箱 -->
+	<meta name="format-detection" content="email=no">
+
+	<!-- 忽略自动识别电话和邮箱 -->
+	<meta name="format-detection" content="telephone=no, email=no">
 	<link rel="icon" href="<%= BASE_URL %>favicon.ico">
 	<title><%= htmlWebpackPlugin.options.title %></title>
 	<!--更新时间：<%= VUE_APP_TIME %>	  -->
