@@ -1,5 +1,4 @@
 import Vue from "vue";
-import VuePageStack from "vue-page-stack";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -23,7 +22,6 @@ if (process.env.NODE_ENV === "development") {
   new Vconsole();
 }
 
-Vue.use(VuePageStack, { router });
 Vue.use(Vant);
 
 new Vue({

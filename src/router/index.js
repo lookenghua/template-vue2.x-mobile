@@ -8,11 +8,8 @@ const routes = [
   {
     path: "/",
     component: Layout,
+    redirect: "/home",
     children: [
-      {
-        path: "/",
-        direct: "/home"
-      },
       {
         path: "/home",
         name: "Home",
@@ -28,7 +25,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  mode: "hash",
   base: process.env.BASE_URL,
   routes
 });

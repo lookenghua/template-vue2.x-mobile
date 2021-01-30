@@ -1,5 +1,5 @@
 module.exports = ({ file }) => {
-  let rootValue = 75;
+  let rootValue = 37.5;
   if (file && file.dirname && file.dirname.indexOf("vant") > -1) {
     rootValue = 37.5;
   }

@@ -1,9 +1,15 @@
 <template>
   <div id="app">
-    <vue-page-stack>
-      <router-view />
-    </vue-page-stack>
+    <router-view />
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+html,
+body,
+#app,
+.layout {
+  width: 100%;
+  height: 100%;
+}
+</style>
